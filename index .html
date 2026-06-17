@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pradhumay Gaur — AI/ML Engineer</title>
+  <meta name="description" content="AI/ML Engineer specializing in LLM alignment, RAG systems, and production-grade ML pipelines." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0A0A0F;
+      --bg-surface: #111118;
+      --bg-card: #16161F;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(79,142,247,0.4);
+      --text-primary: #F0F0F4;
+      --text-secondary: #888899;
+      --text-muted: #555566;
+      --accent: #4F8EF7;
+      --accent-dim: rgba(79,142,247,0.12);
+      --accent-glow: rgba(79,142,247,0.06);
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', sans-serif;
+      --green: #3DD68C;
+      --green-dim: rgba(61,214,140,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text-primary); }
+
+    /* SECTIONS */
+    section { padding: 6rem 0; }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(79,142,247,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-tag::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.65rem 1.4rem;
+      background: var(--accent);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.65rem 1.4rem;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-ghost:hover { border-color: var(--text-muted); color: var(--text-primary); }
+
+    .hero-metrics {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .metric-val {
+      font-family: var(--mono);
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .metric-val span { color: var(--accent); }
+
+    .metric-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    /* SECTION HEADERS */
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-intro {
+      color: var(--text-secondary);
+      font-size: 15px;
+      max-width: 520px;
+      margin-bottom: 3rem;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .project-card.featured {
+      border-color: rgba(79,142,247,0.2);
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(79,142,247,0.03) 100%);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .project-link {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .project-link:hover { border-color: var(--accent); color: var(--accent); }
+
+    .project-link.live {
+      border-color: rgba(61,214,140,0.3);
+      color: var(--green);
+    }
+
+    .project-link.live:hover { border-color: var(--green); }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 1.1rem;
+    }
+
+    .project-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-bullets li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .project-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 9px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    .stat-badge {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 4px 10px;
+      background: var(--green-dim);
+      border: 1px solid rgba(61,214,140,0.2);
+      border-radius: 4px;
+      color: var(--green);
+      letter-spacing: 0.04em;
+    }
+
+    /* EXPERIENCE */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 2rem;
+    }
+
+    .exp-meta {
+      padding-top: 3px;
+    }
+
+    .exp-period {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+
+    .exp-company {
+      font-size: 13px;
+      color: var(--accent);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .exp-role {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .exp-bullets li {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      padding-left: 1.1rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .exp-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .exp-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .skill-group {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .skill-group-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-item {
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 4px 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-secondary);
+    }
+
+    /* ABOUT */
+    #about .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-text strong { color: var(--text-primary); font-weight: 500; }
+
+    .about-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .detail-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .detail-key {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .detail-val {
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    .detail-val a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .detail-val a:hover { text-decoration: underline; }
+
+    /* CONTACT */
+    #contact {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-inner {
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .contact-inner h2 { margin-bottom: 0.75rem; }
+
+    .contact-inner p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* TERMINAL CURSOR BLINK */
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--accent);
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blink 1.1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* DIVIDER */
+    .section-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 2rem;
+      border-radius: 2px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      nav { padding: 0.9rem 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      section { padding: 4rem 0; }
+      h1 { font-size: 2.25rem; }
+      .hero-metrics { grid-template-columns: repeat(2, 1fr); }
+      .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      #about .container { grid-template-columns: 1fr; gap: 2.5rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .project-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* FADE IN ANIMATION */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; transition: none; }
+      .cursor { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">pg.dev</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <p class="hero-tag">Available for full-time roles</p>
+      <h1>I build AI systems<br>that actually <em>ship</em><span class="cursor"></span></h1>
+      <p class="hero-sub">
+        Final-year IT student with hands-on experience in LLM alignment pipelines, RAG evaluation systems, and production apps serving real users. Not just notebooks — deployed systems.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">View Projects ↓</a>
+        <a href="mailto:gaurpradhumay@gmail.com" class="btn-ghost">Get in Touch</a>
+        <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div>
+          <div class="metric-val">800<span>+</span></div>
+          <div class="metric-label">Active users on production app</div>
+        </div>
+        <div>
+          <div class="metric-val">5.0<span>/5</span></div>
+          <div class="metric-label">Freelance client rating</div>
+        </div>
+        <div>
+          <div class="metric-val">99.9<span>%</span></div>
+          <div class="metric-label">Uptime — COER GateFlow</div>
+        </div>
+        <div>
+          <div class="metric-val">3<span>+</span></div>
+          <div class="metric-label">Live commercial client projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">Work</p>
+      <h2>Selected Projects</h2>
+      <p class="section-intro">Built and shipped — personal projects, production systems, and paid client work.</p>
+      <div class="section-divider"></div>
+
+      <div class="projects-grid">
+
+        <!-- RAG Pipeline -->
+        <div class="project-card featured fade-in">
+          <div class="project-header">
+            <span class="project-title">RAG Evaluation CI/CD Pipeline</span>
+            <div class="project-links">
+              <a href="#" class="project-link live">↗ Live Demo</a>
+              <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            Production-grade RAG evaluation system using LLM-as-a-Judge scoring. CI/CD gates automatically block PR merges when retrieval quality drops below threshold — enforcing standards on every commit.
+          </p>
+          <ul class="project-bullets">
+            <li>LLM-as-a-Judge scoring across 4 metrics: Faithfulness, Answer Relevance, Context Recall, Semantic Similarity</li>
+            <li>GitHub Actions gates block merges when any metric falls below 4.0/5.0</li>
+            <li>Interactive analytics dashboard with metric trend history and per-question retrieval inspection</li>
+          </ul>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Groq API</span>
+              <span class="tag">TF-IDF</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">GitHub Actions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GateFlow -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <span class="project-title">COER GateFlow — Campus Entry Management</span>
+            <div class="project-links">
+              <a href="#" class="project-link live">↗ Live Demo</a>
+              <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            Campus-wide access control system built and deployed at scale. Handles 2,000+ daily interactions with encrypted QR-code verification.
+          </p>
+          <ul class="project-bullets">
+            <li>800+ active users, 99.9% uptime — real production load</li>
+            <li>MSG91 SMS API integration for real-time entry/exit notifications</li>
+            <li>Admin dashboard for access log monitoring and anomaly detection</li>
+          </ul>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span class="tag">Django</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MSG91</span>
+              <span class="tag">Python</span>
+            </div>
+            <span class="stat-badge">800+ users · 2k+ daily</span>
+          </div>
+        </div>
+
+        <!-- PaperFlowAI -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <span class="project-title">PaperFlowAI — Exam Paper Generation System</span>
+            <div class="project-links">
+              <a href="https://paperflowai.in/login" target="_blank" rel="noopener" class="project-link live">↗ Live Site</a>
+              <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            Enterprise exam paper generation platform deployed at COER University. AI-assisted question selection and review — generated 191+ papers in the Mid-Term 2026 exam cycle alone.
+          </p>
+          <ul class="project-bullets">
+            <li>AI-driven question selection and review pipeline — reduces manual paper-setting from 5 hours to under 10 minutes</li>
+            <li>Role-based access control with JWT auth; supports high-concurrency faculty requests</li>
+            <li>Isolated PDF generation engine producing 500+ unique papers with zero formatting bottlenecks</li>
+          </ul>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span class="tag">Django</span>
+              <span class="tag">Python</span>
+              <span class="tag">JWT</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Next.js</span>
+            </div>
+            <span class="stat-badge">191+ papers · Live at COER</span>
+          </div>
+        </div>
+
+        <!-- Stock Prediction -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <span class="project-title">Indian Market Stock Prediction System</span>
+            <div class="project-links">
+              <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            Paid freelance engagement — Indian market stock prediction using LSTM neural networks and technical indicators. Delivered on time with full client sign-off.
+          </p>
+          <ul class="project-bullets">
+            <li>LSTM model with RSI and MACD indicators; closing price MAE of ~2.3%</li>
+            <li>Markowitz mean-variance portfolio optimization benchmarked vs buy-and-hold</li>
+            <li>5.0/5.0 client rating on Freelancer.in</li>
+          </ul>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LSTM</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Pandas</span>
+            </div>
+            <span class="stat-badge">MAE ~2.3% · 5.0 rating</span>
+          </div>
+        </div>
+
+        <!-- Aghorify -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <span class="project-title">Aghorify — Spiritual Ecommerce Store</span>
+            <div class="project-links">
+              <a href="https://aghorify.in" target="_blank" rel="noopener" class="project-link live">↗ Live Site</a>
+            </div>
+          </div>
+          <p class="project-desc">
+            Full commercial ecommerce platform built for a client selling spiritual wearables — Rudraksha beads, sacred malas, and energy stone jewellery. Live, handling real orders.
+          </p>
+          <ul class="project-bullets">
+            <li>60+ products listed with AI-generated product images using Banana image generation API</li>
+            <li>Meta Business API integration for WhatsApp order notifications and customer updates</li>
+            <li>Delivered end-to-end in 45 days — frontend, backend, hosting, and deployment on Hostinger</li>
+          </ul>
+          <div class="project-footer">
+            <div class="tech-tags">
+              <span class="tag">React</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Meta Business API</span>
+              <span class="tag">Hostinger</span>
+              <span class="tag">Banana AI</span>
+            </div>
+            <span class="stat-badge">Live · 60+ products</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label">Experience</p>
+      <h2>Where I've Worked</h2>
+      <div class="section-divider"></div>
+
+      <div class="exp-list">
+
+        <div class="exp-item fade-in">
+          <div class="exp-meta">
+            <div class="exp-period">Jan 2026<br>May 2026</div>
+            <div class="exp-company">Ethara AI</div>
+          </div>
+          <div>
+            <div class="exp-role">LLM Post-Training Intern</div>
+            <ul class="exp-bullets">
+              <li>Evaluated multimodal LLM outputs (text, image, audio, video) against structured rubrics to generate human preference datasets for RLHF and DPO alignment pipelines</li>
+              <li>Built automated data filtering and validation pipelines using Pandas and Regex — reduced manual cleaning overhead by 30%</li>
+              <li>Collaborated with alignment researchers on edge case assessment to improve fine-tuning dataset quality</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="exp-divider" />
+
+        <div class="exp-item fade-in">
+          <div class="exp-meta">
+            <div class="exp-period">Feb 2026</div>
+            <div class="exp-company">Freelancer.in</div>
+          </div>
+          <div>
+            <div class="exp-role">AI/ML Developer (Contract)</div>
+            <ul class="exp-bullets">
+              <li>Delivered Indian market stock prediction system within client budget and timeline</li>
+              <li>Applied Markowitz mean-variance framework for portfolio optimization</li>
+              <li>Completed with full client sign-off — 5.0/5.0 rating</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Capabilities</p>
+      <h2>Technical Skills</h2>
+      <div class="section-divider"></div>
+
+      <div class="skills-grid">
+        <div class="skill-group fade-in">
+          <div class="skill-group-label">ML / AI</div>
+          <div class="skill-items">
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">TensorFlow</span>
+            <span class="skill-item">Hugging Face</span>
+            <span class="skill-item">PEFT / LoRA</span>
+            <span class="skill-item">RLHF</span>
+            <span class="skill-item">DPO</span>
+            <span class="skill-item">RAG</span>
+            <span class="skill-item">Scikit-learn</span>
+            <span class="skill-item">OpenCV</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in">
+          <div class="skill-group-label">Languages</div>
+          <div class="skill-items">
+            <span class="skill-item">Python</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in">
+          <div class="skill-group-label">Deployment</div>
+          <div class="skill-items">
+            <span class="skill-item">Django</span>
+            <span class="skill-item">React</span>
+            <span class="skill-item">Next.js</span>
+            <span class="skill-item">Flask</span>
+            <span class="skill-item">Streamlit</span>
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">AWS</span>
+            <span class="skill-item">Vercel</span>
+            <span class="skill-item">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-in">
+          <div class="skill-group-label">Data & Tools</div>
+          <div class="skill-items">
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">MongoDB</span>
+            <span class="skill-item">Pandas</span>
+            <span class="skill-item">NumPy</span>
+            <span class="skill-item">GitHub Actions</span>
+            <span class="skill-item">LM-Eval-Harness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-text">
+        <p class="section-label">About</p>
+        <h2 style="margin-bottom:1.25rem;">Pradhumay Gaur</h2>
+        <p>
+          Final-year B.Tech IT student at COER, Roorkee. I focus on the gap between ML research and production systems — things that run, scale, and actually work in the real world.
+        </p>
+        <p>
+          Interned at <strong>Ethara AI</strong> on LLM post-training and alignment. Built a campus system running at <strong>99.9% uptime for 800+ users</strong>. Delivered a paid ML project with a <strong>5.0 client rating</strong>. IBM AI Foundations certified.
+        </p>
+        <p>
+          Looking for full-time roles in ML Engineering, AI/LLM Engineering, or Data Science where I can work on systems that ship.
+        </p>
+      </div>
+      <div class="about-details">
+        <div class="detail-row">
+          <span class="detail-key">Location</span>
+          <span class="detail-val">Roorkee, Uttarakhand, India</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key">Education</span>
+          <span class="detail-val">B.Tech IT · COER · 2022–2026</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key">Email</span>
+          <span class="detail-val"><a href="mailto:gaurpradhumay@gmail.com">gaurpradhumay@gmail.com</a></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key">GitHub</span>
+          <span class="detail-val"><a href="https://github.com/Greekkgod" target="_blank" rel="noopener">github.com/Greekkgod</a></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key">LinkedIn</span>
+          <span class="detail-val"><a href="https://linkedin.com/in/pradhumay-gaur" target="_blank" rel="noopener">linkedin.com/in/pradhumay-gaur</a></span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-key">Status</span>
+          <span class="detail-val" style="color: var(--green);">● Open to opportunities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="section-label" style="justify-content:center; display:flex;">Contact</p>
+        <h2>Let's work together</h2>
+        <p>If you're hiring for ML, AI, or data roles — I'm available for full-time positions starting mid-2026.</p>
+        <div class="contact-links">
+          <a href="mailto:gaurpradhumay@gmail.com" class="btn-primary">Send Email</a>
+          <a href="https://linkedin.com/in/pradhumay-gaur" target="_blank" rel="noopener" class="btn-ghost">LinkedIn ↗</a>
+          <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Pradhumay Gaur · Built with HTML/CSS · Deployed on Vercel</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>

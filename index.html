@@ -17,6 +17,43 @@
   <meta property="og:url" content="https://pradhumay.dev" />
   <meta property="og:image" content="https://pradhumay.dev/og-image.jpg" />
 
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pradhumay Gaur — AI/ML Engineer" />
+  <meta name="twitter:description" content="AI/ML Engineer specializing in LLM alignment, RAG systems, and production-grade ML pipelines." />
+  <meta name="twitter:image" content="https://pradhumay.dev/og-image.jpg" />
+
+  <link rel="canonical" href="https://pradhumay.dev/" />
+
+  <!-- AEO & SEO Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pradhumay Gaur",
+    "jobTitle": "AI/ML Engineer",
+    "url": "https://pradhumay.dev",
+    "sameAs": [
+      "https://github.com/Greekkgod",
+      "https://linkedin.com/in/pradhumay-gaur"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "COER University"
+    },
+    "description": "AI/ML Engineer specializing in LLM alignment, RAG systems, and production-grade ML pipelines.",
+    "knowsAbout": [
+      "Machine Learning",
+      "Large Language Models",
+      "LLM Alignment",
+      "RAG Systems",
+      "Production-grade ML pipelines",
+      "PyTorch",
+      "Python"
+    ]
+  }
+  </script>
+
   <link rel="icon" href="assets/avatar.png" type="image/png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,16 +69,19 @@
 
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#hero" class="nav-logo">Pradhumay Gaur</a>
+  <!-- HEADER -->
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="#hero" class="nav-logo">Pradhumay Gaur</a>
     <ul class="nav-links">
       <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#projects">Works</a></li>
       <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gaurpradhumay@gmail.com" target="_blank" rel="noopener" class="nav-email">gaurpradhumay@gmail.com</a></li>
     </ul>
-  </nav>
+    </nav>
+  </header>
 
+  <main>
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
@@ -85,6 +125,7 @@
     </div>
 
     <div class="hero-right fade-in">
+      <img src="assets/my_image.jpeg" alt="Pradhumay Gaur" class="hero-profile-img" />
     </div>
   </section>
 
@@ -405,8 +446,10 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
-  <footer>
+  <footer role="contentinfo">
     <p>Pradhumay Gaur · Built with HTML/CSS/JS</p>
   </footer>
 

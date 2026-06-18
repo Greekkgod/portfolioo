@@ -109,7 +109,7 @@ section {
 #hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.9fr 1.1fr;
   padding: 0;
   /* Override section padding */
 }
@@ -118,7 +118,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 6rem 4rem 4rem 15%;
+  padding: 6rem 2rem 4rem 15%;
   position: relative;
 }
 
@@ -209,9 +209,9 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 3rem;
+  padding: 3rem 3rem 3rem 0;
   gap: 2rem;
 }
 

@@ -14,17 +14,11 @@
   <meta property="og:url" content="https://pradhumay.dev" />
   <meta property="og:image" content="https://pradhumay.dev/og-image.jpg" />
   
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pradhumay Gaur — AI/ML Engineer" />
-  <meta name="twitter:description" content="AI/ML Engineer specializing in LLM alignment, RAG systems, and production-grade ML pipelines." />
-  <meta name="twitter:image" content="https://pradhumay.dev/og-image.jpg" />
-  
   <link rel="icon" href="assets/avatar.png" type="image/png" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   
   <!-- External Assets -->
   <link rel="stylesheet" href="styles.css" />
@@ -34,52 +28,63 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#hero" class="nav-logo">pg.dev</a>
+    <a href="#hero" class="nav-logo">Pradhumay Gaur</a>
     <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#projects">Works</a></li>
+      <li><a href="mailto:gaurpradhumay@gmail.com" class="nav-email">gaurpradhumay@gmail.com</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="container">
-      <div class="hero-layout">
-        <div class="hero-text">
-          <p class="hero-tag">Available for full-time roles</p>
-          <h1>I build AI systems<br>that actually <em>ship</em><span class="cursor"></span></h1>
-          <p class="hero-sub">
-            Final-year IT student with hands-on experience in LLM alignment pipelines, RAG evaluation systems, and production apps serving real users. Not just notebooks — deployed systems.
-          </p>
-          <div class="hero-ctas">
-            <a href="#projects" class="btn-primary">View Projects ↓</a>
-            <a href="assets/Pradhumay_Gaur_RESUME.pdf" class="btn-primary" target="_blank" rel="noopener">Download Resume</a>
-            <a href="#contact" class="btn-ghost">Get in Touch</a>
-            <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
-          </div>
-        </div>
-        <div class="hero-visual fade-in">
-          <img src="assets/avatar.png" alt="Pradhumay Gaur" class="hero-avatar" />
-        </div>
+    <div class="hero-left">
+      <p class="hero-tag fade-in">HELLO AND WELCOME</p>
+      <h1 class="fade-in">I'm Pradhumay,<br>AI/ML Engineer.</h1>
+      <p class="hero-sub fade-in">
+        I build scalable AI systems. From LLM alignment to production-grade RAG applications, I focus on bridging the gap between research and real-world impact. If you need robust machine learning pipelines, let's connect.
+      </p>
+      <div class="hero-ctas fade-in">
+        <a href="#projects" class="btn-primary">See my works</a>
+        <a href="assets/Pradhumay_Gaur_RESUME.pdf" class="btn-ghost" target="_blank" rel="noopener">My Resume</a>
       </div>
+      <div class="keep-scroll fade-in">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        Keep Scroll
+      </div>
+    </div>
+    
+    <div class="hero-right fade-in">
+      <div class="hero-socials">
+        <span>Can follow me on</span>
+        <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://linkedin.com/in/pradhumay-gaur" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
-      <div class="hero-metrics">
+  <!-- METRICS -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="hero-metrics fade-in">
         <div>
-          <div class="metric-val">800<span>+</span></div>
+          <div class="metric-val">800+</div>
           <div class="metric-label">Active users on production app</div>
         </div>
         <div>
-          <div class="metric-val">5.0<span>/5</span></div>
+          <div class="metric-val">5.0/5</div>
           <div class="metric-label">Freelance client rating</div>
         </div>
         <div>
-          <div class="metric-val">99.9<span>%</span></div>
+          <div class="metric-val">99.9%</div>
           <div class="metric-label">Uptime — COER GateFlow</div>
         </div>
         <div>
-          <div class="metric-val">3<span>+</span></div>
+          <div class="metric-val">3+</div>
           <div class="metric-label">Live commercial client projects</div>
         </div>
       </div>
@@ -92,14 +97,13 @@
       <p class="section-label">My Work</p>
       <h2>Things I've Built</h2>
       <p class="section-intro">Here are a few projects I've poured my energy into, ranging from complex ML pipelines to full-stack applications serving real users.</p>
-      <div class="section-divider"></div>
 
       <div class="projects-grid">
 
         <!-- RAG Pipeline -->
-        <div class="project-card featured fade-in">
+        <div class="project-card fade-in">
           <div class="project-header">
-            <span class="project-title">RAG Evaluation CI/CD Pipeline</span>
+            <span class="project-title">RAG Evaluation CI/CD</span>
             <div class="project-links">
               <span class="project-link offline">Offline</span>
               <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
@@ -107,20 +111,18 @@
           </div>
           <img src="assets/rag_eval_ui_fixed_1781673724734.png" alt="RAG Evaluation Dashboard" class="project-image" loading="lazy" />
           <p class="project-desc">
-            Production-grade RAG evaluation system using LLM-as-a-Judge scoring. CI/CD gates automatically block PR merges when retrieval quality drops below threshold — enforcing standards on every commit.
+            Production-grade RAG evaluation system using LLM-as-a-Judge scoring. CI/CD gates automatically block PR merges when retrieval quality drops below threshold.
           </p>
           <ul class="project-bullets">
-            <li>LLM-as-a-Judge scoring across 4 metrics: Faithfulness, Answer Relevance, Context Recall, Semantic Similarity</li>
+            <li>LLM-as-a-Judge scoring across Faithfulness, Relevance, Recall, Similarity</li>
             <li>GitHub Actions gates block merges when any metric falls below 4.0/5.0</li>
-            <li>Interactive analytics dashboard with metric trend history and per-question retrieval inspection</li>
+            <li>Interactive analytics dashboard with metric trend history</li>
           </ul>
           <div class="project-footer">
             <div class="tech-tags">
               <span class="tag">Python</span>
               <span class="tag">Groq API</span>
-              <span class="tag">TF-IDF</span>
               <span class="tag">Streamlit</span>
-              <span class="tag">GitHub Actions</span>
             </div>
           </div>
         </div>
@@ -128,7 +130,7 @@
         <!-- GateFlow -->
         <div class="project-card fade-in">
           <div class="project-header">
-            <span class="project-title">COER GateFlow — Campus Entry Management</span>
+            <span class="project-title">COER GateFlow</span>
             <div class="project-links">
               <span class="project-link offline">Offline</span>
               <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
@@ -147,97 +149,64 @@
             <div class="tech-tags">
               <span class="tag">Django</span>
               <span class="tag">PostgreSQL</span>
-              <span class="tag">MSG91</span>
               <span class="tag">Python</span>
             </div>
-            <span class="stat-badge">800+ users · 2k+ daily</span>
+            <span class="stat-badge">800+ users</span>
           </div>
         </div>
 
         <!-- PaperFlowAI -->
         <div class="project-card fade-in">
           <div class="project-header">
-            <span class="project-title">PaperFlowAI — Exam Paper Generation System</span>
+            <span class="project-title">PaperFlowAI</span>
             <div class="project-links">
-              <a href="https://paperflowai.in/login" target="_blank" rel="noopener" class="project-link live">↗ Live Site</a>
+              <a href="https://paperflowai.in/login" target="_blank" rel="noopener" class="project-link live">Live Site</a>
               <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
             </div>
           </div>
           <img src="assets/paperflow_ui_fixed_1781673753303.png" alt="PaperFlowAI Interface" class="project-image" loading="lazy" />
           <p class="project-desc">
-            Enterprise exam paper generation platform deployed at COER University. AI-assisted question selection and review — generated 191+ papers in the Mid-Term 2026 exam cycle alone.
+            Enterprise exam paper generation platform deployed at COER University. AI-assisted question selection and review.
           </p>
           <ul class="project-bullets">
-            <li>AI-driven question selection and review pipeline — reduces manual paper-setting from 5 hours to under 10 minutes</li>
-            <li>Role-based access control with JWT auth; supports high-concurrency faculty requests</li>
-            <li>Isolated PDF generation engine producing 500+ unique papers with zero formatting bottlenecks</li>
+            <li>Reduces manual paper-setting from 5 hours to under 10 minutes</li>
+            <li>Role-based access control with JWT auth for high concurrency</li>
+            <li>Generated 191+ papers in the Mid-Term 2026 exam cycle</li>
           </ul>
           <div class="project-footer">
             <div class="tech-tags">
               <span class="tag">Django</span>
-              <span class="tag">Python</span>
-              <span class="tag">JWT</span>
-              <span class="tag">PostgreSQL</span>
               <span class="tag">Next.js</span>
+              <span class="tag">PostgreSQL</span>
             </div>
-            <span class="stat-badge">191+ papers · Live at COER</span>
+            <span class="stat-badge">Live at COER</span>
           </div>
         </div>
 
         <!-- Stock Prediction -->
         <div class="project-card fade-in">
           <div class="project-header">
-            <span class="project-title">Indian Market Stock Prediction System</span>
+            <span class="project-title">Market Prediction System</span>
             <div class="project-links">
               <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="project-link">GitHub</a>
             </div>
           </div>
           <img src="assets/stock_prediction_ui_fixed_1781673766261.png" alt="Stock Prediction Chart" class="project-image" loading="lazy" />
           <p class="project-desc">
-            Paid freelance engagement — Indian market stock prediction using LSTM neural networks and technical indicators. Delivered on time with full client sign-off.
+            Paid freelance engagement — Indian market stock prediction using LSTM neural networks and technical indicators. Delivered on time.
           </p>
           <ul class="project-bullets">
-            <li>LSTM model with RSI and MACD indicators; closing price MAE of ~2.3%</li>
-            <li>Markowitz mean-variance portfolio optimization benchmarked vs buy-and-hold</li>
+            <li>LSTM model with RSI and MACD indicators; closing price MAE ~2.3%</li>
+            <li>Markowitz mean-variance portfolio optimization benchmarked</li>
             <li>5.0/5.0 client rating on Freelancer.in</li>
           </ul>
           <div class="project-footer">
             <div class="tech-tags">
-              <span class="tag">Python</span>
-              <span class="tag">LSTM</span>
               <span class="tag">PyTorch</span>
+              <span class="tag">LSTM</span>
               <span class="tag">Pandas</span>
             </div>
-            <span class="stat-badge">MAE ~2.3% · 5.0 rating</span>
-          </div>
-        </div>
-
-        <!-- Aghorify -->
-        <div class="project-card fade-in">
-          <div class="project-header">
-            <span class="project-title">Aghorify — Spiritual Ecommerce Store</span>
-            <div class="project-links">
-              <a href="https://aghorify.in" target="_blank" rel="noopener" class="project-link live">↗ Live Site</a>
-            </div>
-          </div>
-          <img src="assets/aghorify_ui_fixed_1781673780536.png" alt="Aghorify Storefront" class="project-image" loading="lazy" />
-          <p class="project-desc">
-            Full commercial ecommerce platform built for a client selling spiritual wearables — Rudraksha beads, sacred malas, and energy stone jewellery. Live, handling real orders.
-          </p>
-          <ul class="project-bullets">
-            <li>60+ products listed with AI-generated product images using Banana image generation API</li>
-            <li>Meta Business API integration for WhatsApp order notifications and customer updates</li>
-            <li>Delivered end-to-end in 45 days — frontend, backend, hosting, and deployment on Hostinger</li>
-          </ul>
-          <div class="project-footer">
-            <div class="tech-tags">
-              <span class="tag">React</span>
-              <span class="tag">PHP</span>
-              <span class="tag">Meta Business API</span>
-              <span class="tag">Hostinger</span>
-              <span class="tag">Banana AI</span>
-            </div>
-            <span class="stat-badge">Live · 60+ products</span>
+            <span class="stat-badge">5.0 rating</span>
           </div>
         </div>
 
@@ -250,21 +219,19 @@
     <div class="container">
       <p class="section-label">Experience</p>
       <h2>Where I've Worked</h2>
-      <div class="section-divider"></div>
 
       <div class="exp-list">
-
         <div class="exp-item fade-in">
           <div class="exp-meta">
-            <div class="exp-period">Jan 2026<br>May 2026</div>
-            <div class="exp-company">Ethara AI</div>
+            <div class="exp-period">Jan 2026 — May 2026</div>
           </div>
           <div>
+            <div class="exp-company">Ethara AI</div>
             <div class="exp-role">LLM Post-Training Intern</div>
             <ul class="exp-bullets">
-              <li>Evaluated multimodal LLM outputs (text, image, audio, video) against structured rubrics to generate human preference datasets for RLHF and DPO alignment pipelines</li>
-              <li>Built automated data filtering and validation pipelines using Pandas and Regex — reduced manual cleaning overhead by 30%</li>
-              <li>Collaborated with alignment researchers on edge case assessment to improve fine-tuning dataset quality</li>
+              <li>Evaluated multimodal LLM outputs against structured rubrics to generate human preference datasets for RLHF and DPO alignment.</li>
+              <li>Built automated data filtering pipelines using Pandas and Regex — reduced manual cleaning overhead by 30%.</li>
+              <li>Collaborated with alignment researchers on edge case assessment to improve dataset quality.</li>
             </ul>
           </div>
         </div>
@@ -274,18 +241,17 @@
         <div class="exp-item fade-in">
           <div class="exp-meta">
             <div class="exp-period">Feb 2026</div>
-            <div class="exp-company">Freelancer.in</div>
           </div>
           <div>
+            <div class="exp-company">Freelancer.in</div>
             <div class="exp-role">AI/ML Developer (Contract)</div>
             <ul class="exp-bullets">
-              <li>Delivered Indian market stock prediction system within client budget and timeline</li>
-              <li>Applied Markowitz mean-variance framework for portfolio optimization</li>
-              <li>Completed with full client sign-off — 5.0/5.0 rating</li>
+              <li>Delivered Indian market stock prediction system within client budget and timeline.</li>
+              <li>Applied Markowitz mean-variance framework for portfolio optimization.</li>
+              <li>Completed with full client sign-off — 5.0/5.0 rating.</li>
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -295,7 +261,6 @@
     <div class="container">
       <p class="section-label">Capabilities</p>
       <h2>Technical Skills</h2>
-      <div class="section-divider"></div>
 
       <div class="skills-grid">
         <div class="skill-group fade-in">
@@ -305,11 +270,9 @@
             <span class="skill-item">TensorFlow</span>
             <span class="skill-item">Hugging Face</span>
             <span class="skill-item">PEFT / LoRA</span>
-            <span class="skill-item">RLHF</span>
-            <span class="skill-item">DPO</span>
+            <span class="skill-item">RLHF & DPO</span>
             <span class="skill-item">RAG</span>
             <span class="skill-item">Scikit-learn</span>
-            <span class="skill-item">OpenCV</span>
           </div>
         </div>
 
@@ -327,13 +290,9 @@
           <div class="skill-group-label">Deployment</div>
           <div class="skill-items">
             <span class="skill-item">Django</span>
-            <span class="skill-item">React</span>
-            <span class="skill-item">Next.js</span>
-            <span class="skill-item">Flask</span>
-            <span class="skill-item">Streamlit</span>
+            <span class="skill-item">React & Next.js</span>
             <span class="skill-item">Docker</span>
             <span class="skill-item">AWS</span>
-            <span class="skill-item">Vercel</span>
             <span class="skill-item">CI/CD</span>
           </div>
         </div>
@@ -342,11 +301,8 @@
           <div class="skill-group-label">Data & Tools</div>
           <div class="skill-items">
             <span class="skill-item">PostgreSQL</span>
-            <span class="skill-item">MongoDB</span>
-            <span class="skill-item">Pandas</span>
-            <span class="skill-item">NumPy</span>
+            <span class="skill-item">Pandas & NumPy</span>
             <span class="skill-item">GitHub Actions</span>
-            <span class="skill-item">LM-Eval-Harness</span>
           </div>
         </div>
       </div>
@@ -358,12 +314,12 @@
     <div class="container">
       <div class="about-text">
         <p class="section-label">About</p>
-        <h2 style="margin-bottom:1.25rem;">Pradhumay Gaur</h2>
+        <h2 style="margin-bottom:1.5rem;">Pradhumay Gaur</h2>
         <p>
           Final-year B.Tech IT student at COER, Roorkee. I focus on the gap between ML research and production systems — things that run, scale, and actually work in the real world.
         </p>
         <p>
-          Interned at <strong>Ethara AI</strong> on LLM post-training and alignment. Built a campus system running at <strong>99.9% uptime for 800+ users</strong>. Delivered a paid ML project with a <strong>5.0 client rating</strong>. IBM AI Foundations certified.
+          Interned at <strong>Ethara AI</strong> on LLM post-training and alignment. Built a campus system running at <strong>99.9% uptime for 800+ users</strong>. Delivered a paid ML project with a <strong>5.0 client rating</strong>.
         </p>
         <p>
           Looking for full-time roles in ML Engineering, AI/LLM Engineering, or Data Science where I can work on systems that ship.
@@ -390,10 +346,6 @@
           <span class="detail-key">LinkedIn</span>
           <span class="detail-val"><a href="https://linkedin.com/in/pradhumay-gaur" target="_blank" rel="noopener">linkedin.com/in/pradhumay-gaur</a></span>
         </div>
-        <div class="detail-row">
-          <span class="detail-key">Status</span>
-          <span class="detail-val" style="color: var(--green);">● Open to opportunities</span>
-        </div>
       </div>
     </div>
   </section>
@@ -402,13 +354,12 @@
   <section id="contact">
     <div class="container">
       <div class="contact-inner">
-        <p class="section-label" style="justify-content:center; display:flex;">Get In Touch</p>
+        <p class="section-label">Get In Touch</p>
         <h2>Let's build something great</h2>
-        <p>Whether you have a question, a project idea, or are looking to hire a passionate AI engineer, my inbox is always open.</p>
+        <p>Whether you have a project idea, or are looking to hire a passionate AI engineer, my inbox is always open.</p>
         <div class="contact-links">
           <a href="mailto:gaurpradhumay@gmail.com" class="btn-primary">Send Email</a>
-          <a href="https://linkedin.com/in/pradhumay-gaur" target="_blank" rel="noopener" class="btn-ghost">LinkedIn ↗</a>
-          <a href="https://github.com/Greekkgod" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
+          <a href="https://linkedin.com/in/pradhumay-gaur" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
         </div>
       </div>
     </div>

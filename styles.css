@@ -7,22 +7,23 @@
 }
 
 :root {
-  --bg: #FFFFFF;
-  --bg-surface: #F9FAFB;
+  --bg: #FAFAFA;
+  --bg-surface: #F4F4F5;
   --bg-card: #FFFFFF;
-  --border: #E5E7EB;
-  --border-hover: #D1D5DB;
-  --shadow-soft: 0 12px 30px rgba(17, 24, 39, 0.05);
-  --text-primary: #111827;
-  --text-secondary: #4B5563;
-  --text-muted: #9CA3AF;
-  --accent: #111827;
-  --accent-dim: rgba(17, 24, 39, 0.05);
-  --accent-glow: rgba(17, 24, 39, 0.03);
+  --border: #E4E4E7;
+  --border-hover: #D4D4D8;
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --text-primary: #09090B;
+  --text-secondary: #3F3F46;
+  --text-muted: #71717A;
+  --accent: #2563EB;
+  --accent-dim: rgba(37, 99, 235, 0.1);
+  --accent-glow: rgba(37, 99, 235, 0.15);
   --mono: 'JetBrains Mono', monospace;
-  --sans: 'Inter', sans-serif;
-  --green: #10B981;
-  --green-dim: rgba(16, 185, 129, 0.1);
+  --sans: 'Space Grotesk', sans-serif;
+  --heading: 'Archivo', sans-serif;
+  --green: #2563EB;
+  --green-dim: rgba(37, 99, 235, 0.1);
 }
 
 html {
@@ -73,7 +74,7 @@ nav.nav-scrolled {
 }
 
 .nav-logo {
-  font-family: var(--sans);
+  font-family: var(--heading);
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -143,7 +144,7 @@ section {
 }
 
 .hero-tag {
-  font-family: var(--sans);
+  font-family: var(--heading);
   font-size: 13px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -177,6 +178,7 @@ section {
 }
 
 h1 {
+  font-family: var(--heading);
   font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 700;
   line-height: 1.1;
@@ -220,7 +222,7 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 0.9rem 2rem;
-  background: var(--text-primary);
+  background: var(--accent);
   color: #fff;
   font-size: 15px;
   font-weight: 500;
@@ -230,9 +232,9 @@ h1 {
 }
 
 .btn-primary:hover {
-  background: #000;
+  background: #1D4ED8;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
 }
 
 .btn-ghost {
@@ -325,7 +327,7 @@ h1 {
 }
 
 .metric-val {
-  font-family: var(--sans);
+  font-family: var(--heading);
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -341,7 +343,7 @@ h1 {
 
 /* SECTION HEADERS */
 .section-label {
-  font-family: var(--sans);
+  font-family: var(--heading);
   font-size: 13px;
   font-weight: 600;
   color: var(--text-secondary);
@@ -351,6 +353,7 @@ h1 {
 }
 
 h2 {
+  font-family: var(--heading);
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -397,6 +400,7 @@ h2 {
 }
 
 .project-title {
+  font-family: var(--heading);
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -426,12 +430,12 @@ h2 {
 }
 
 .project-link.live {
-  background: var(--text-primary);
+  background: var(--accent);
   color: white;
 }
 
 .project-link.live:hover {
-  background: #000;
+  background: #1D4ED8;
 }
 
 .project-link.offline {
@@ -536,6 +540,7 @@ h2 {
 }
 
 .exp-company {
+  font-family: var(--heading);
   font-size: 16px;
   font-weight: 700;
   color: var(--text-primary);
@@ -543,6 +548,7 @@ h2 {
 }
 
 .exp-role {
+  font-family: var(--heading);
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -593,7 +599,7 @@ h2 {
 }
 
 .skill-group-label {
-  font-family: var(--sans);
+  font-family: var(--heading);
   font-size: 13px;
   font-weight: 600;
   color: var(--text-primary);
